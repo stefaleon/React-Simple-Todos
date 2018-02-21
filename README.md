@@ -11,3 +11,8 @@
 * Form with an input and a button
 * Todo content div
 * TodoItem
+
+
+### 02 Input change
+
+* On input change, set the key-target-name (newTodo) state to the input value.

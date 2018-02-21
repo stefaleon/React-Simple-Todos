@@ -29,6 +29,7 @@ class App extends Component {
             name="newTodo"
             placeHolder="What needs to be done?"
             value={newTodo}
+            onChange={(e) => this.setState({[e.target.name]: e.target.value})}
           />
           <button
             type="submit"
