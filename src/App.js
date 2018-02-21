@@ -12,6 +12,12 @@ class App extends Component {
       todos: [],
       newTodo: ''
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(e) {
+    e.preventDefault();
+    const todos = [...this.state.todos, this.state.newTodo];
+    this.setState({todos, newTodo: ''});
   }
   render() {
     const { newTodo } = this.state;
@@ -21,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Simple Todo App</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             className="todo-input"
             autoComplete="off"
